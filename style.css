@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+}
+
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 5rem;
+  text-align: center;
+  line-height: 1.2;
+  color: white;
+
+  animation: neon1 3s ease-in-out infinite alternate;
+}
+
+h2 {
+  position: absolute;
+  color: white;
+  width: 50%;
+  padding-top: 50vh;
+  padding-left: 26vw;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.5rem;
+  animation: neon2 3s ease-in-out infinite alternate;
+
+}
+
+/*-- Animation Keyframes --*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px #1e84f2;
+  }
+}
+
+
+/*--media queries--*/
+
+@media (max-width: 1250px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    width: 60vw;
+    font-size: 1.2rem;
+    padding-left: 20vw;
+  }
+}
